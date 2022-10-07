@@ -1,0 +1,15 @@
+l = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+
+newl = []
+
+def flaten(x):
+    for i in x:
+        if isinstance(i,list):
+            flaten(i)
+        else:
+            newl.append(i)
+
+flaten(l)
+
+
+print(newl)
